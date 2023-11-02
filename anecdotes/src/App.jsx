@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div>
       <h2>Anecdotes</h2>
-      {anecdotes.map(anecdote =>
+      {anecdotes.toSorted((a, b) => b.votes - a.votes).map(anecdote =>
         <Anecdote key={anecdote.id} anecdote={anecdote} handleVote={() => dispatch(vote(anecdote.id))}/>
       )}
       <h2>create new</h2>
