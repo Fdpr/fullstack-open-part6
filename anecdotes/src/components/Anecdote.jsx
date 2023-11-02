@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 
+
 const Anecdote = ({anecdote, handleVote}) => <div>
 <div>
   {anecdote.content}
